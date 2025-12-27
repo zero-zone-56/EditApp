@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1050</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="act_NewDir"/>
+    <addaction name="act_New"/>
+    <addaction name="act_SetRoot"/>
+    <addaction name="act_Open"/>
+    <addaction name="separator"/>
+    <addaction name="act_Save"/>
+    <addaction name="act_Close"/>
+    <addaction name="act_CloseAll"/>
+    <addaction name="separator"/>
+    <addaction name="act_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="act_FontSize"/>
+    <addaction name="act_FontStyle"/>
+    <addaction name="separator"/>
+    <addaction name="act_FontBold"/>
+    <addaction name="act_FontItalic"/>
+    <addaction name="act_FontUnderline"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="act_Undo"/>
+    <addaction name="act_Redo"/>
+    <addaction name="separator"/>
+    <addaction name="act_Cut"/>
+    <addaction name="act_Copy"/>
+    <addaction name="act_Paste"/>
+   </widget>
+   <widget class="QMenu" name="menuPicture">
+    <property name="title">
+     <string>Picture</string>
+    </property>
+    <addaction name="act_ZoomIn"/>
+    <addaction name="act_ZoomOut"/>
+    <addaction name="act_ZoomRealSize"/>
+    <addaction name="act_ZoomFitWindow"/>
+   </widget>
+   <widget class="QMenu" name="menuDataBase">
+    <property name="title">
+     <string>DataBase</string>
+    </property>
+    <addaction name="act_LinkDB"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuPicture"/>
+   <addaction name="menuDataBase"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QTreeView" name="treeView"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="act_NewDir"/>
+   <addaction name="act_New"/>
+   <addaction name="act_SetRoot"/>
+   <addaction name="act_Open"/>
+   <addaction name="act_Save"/>
+   <addaction name="separator"/>
+   <addaction name="act_Close"/>
+   <addaction name="act_CloseAll"/>
+   <addaction name="separator"/>
+   <addaction name="act_DockVisiable"/>
+   <addaction name="act_DockFloat"/>
+   <addaction name="separator"/>
+   <addaction name="act_Exit"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="act_New">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/new1.bmp</normaloff>:/images/icons/images/new1.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>新建文件</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Open">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/007.GIF</normaloff>:/images/icons/images/007.GIF</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Save">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/save.bmp</normaloff>:/images/icons/images/save.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>保存文件</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Exit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/132.bmp</normaloff>:/images/icons/images/132.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_SetRoot">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/fold.bmp</normaloff>:/images/icons/images/fold.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件夹</string>
+   </property>
+   <property name="toolTip">
+    <string>打开文件夹</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Close">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/folder1.bmp</normaloff>:/images/icons/images/folder1.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_CloseAll">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/delfold1.bmp</normaloff>:/images/icons/images/delfold1.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>关闭所有</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Cut">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/200.bmp</normaloff>:/images/icons/images/200.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>剪切</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Copy">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/202.bmp</normaloff>:/images/icons/images/202.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>复制</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_NewDir">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/upfold1.bmp</normaloff>:/images/icons/images/upfold1.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>新建文件夹</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Paste">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/204.bmp</normaloff>:/images/icons/images/204.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Undo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/undo.bmp</normaloff>:/images/icons/images/undo.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Redo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/redo.bmp</normaloff>:/images/icons/images/redo.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>恢复</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_FontBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/500.bmp</normaloff>:/images/icons/images/500.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>粗体</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_FontItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/502.bmp</normaloff>:/images/icons/images/502.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>斜体</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_FontUnderline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/504.bmp</normaloff>:/images/icons/images/504.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>下划线</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_FontSize">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/112.bmp</normaloff>:/images/icons/images/112.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>字体大小</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_FontStyle">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/506.bmp</normaloff>:/images/icons/images/506.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>字体样式</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_ZoomIn">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/418.bmp</normaloff>:/images/icons/images/418.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_ZoomOut">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/416.bmp</normaloff>:/images/icons/images/416.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_ZoomRealSize">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/414.bmp</normaloff>:/images/icons/images/414.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>实际大小</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_ZoomFitWindow">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/430.bmp</normaloff>:/images/icons/images/430.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>适合窗口</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_DockVisiable">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/BEBULB_16.ICO</normaloff>:/images/icons/images/BEBULB_16.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>窗口可见</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_DockFloat">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/814.bmp</normaloff>:/images/icons/images/814.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>窗口浮动</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_LinkDB">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/2.ico</normaloff>:/images/icons/images/2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>连接数据库</string>
+   </property>
+   <property name="toolTip">
+    <string>连接数据库</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>act_Exit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>311</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TFormTable</class>
+ <widget class="QMainWindow" name="TFormTable">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>120</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="act_OpenDB"/>
+   <addaction name="separator"/>
+   <addaction name="act_RecAppend"/>
+   <addaction name="act_RecInsert"/>
+   <addaction name="act_RecDelete"/>
+   <addaction name="separator"/>
+   <addaction name="act_Submit"/>
+   <addaction name="act_Revert"/>
+   <addaction name="separator"/>
+   <addaction name="act_Fields"/>
+   <addaction name="act_Quit"/>
+  </widget>
+  <action name="act_OpenDB">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/001.GIF</normaloff>:/images/icons/images/001.GIF</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开数据库</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Quit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/exit.bmp</normaloff>:/images/icons/images/exit.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_RecAppend">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/append.bmp</normaloff>:/images/icons/images/append.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>添加</string>
+   </property>
+   <property name="toolTip">
+    <string>添加记录</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_RecInsert">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/306.bmp</normaloff>:/images/icons/images/306.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>插入</string>
+   </property>
+   <property name="toolTip">
+    <string>插入记录</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Submit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/save.bmp</normaloff>:/images/icons/images/save.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存修改</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Revert">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/undo.bmp</normaloff>:/images/icons/images/undo.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+   <property name="toolTip">
+    <string>取消修改</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_RecDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/delete1.bmp</normaloff>:/images/icons/images/delete1.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="toolTip">
+    <string>删除记录</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="act_Fields">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icons/images/124.bmp</normaloff>:/images/icons/images/124.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>字段列表</string>
+   </property>
+   <property name="toolTip">
+    <string>字段列表</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>act_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>TFormTable</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
