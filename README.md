@@ -1,1 +1,3 @@
 该应用程序的界面有QMainWindow默认的菜单栏和工具栏，还有一个QDockWidget组件和一个QTabWidget组件，QDockWidget组件里面放了一个QTreeView组件，设置QFileSystemModel为模型，TreeView为视图显示文件系统。当触发QTreeView的clicked信号时，QFileInfo拿到文件Index索引，QFile读取文件内容，然后在QTabWidget组件上新建一个Tab标签页，Tab标签页里面再添加一个QPlainTextEdit组件显示文本，并且添加了可以对文本内容操作的功能，例如复制、粘贴和字体样式修改等功能。第二个功能是可以显示图片，当点击了一个图片文件时，创建QScroll Area作为容器，容器里再添加一个QLabel组件显示图片，最后调用QTabWidget的addTab函数指定QScrollArea容器作为该标签页的组件。最后一个功能是显示数据库文件内容，这部分的实现是通过新建一个QMainWindow界面，新创建的界面添加一些可以操作数据库库的功能，包括添加、插入和删除等功能，因为该数据库有多张表，通过QSqlRelationalTableModel操作该数据库，最后调用QTabWidget的addTab函数指定QMainWindow界面作为该标签页的组件。
+![图片1](https://github.com/user-attachments/assets/082b1eb1-448d-4b87-b377-d88174af3823)
+![图片2](https://github.com/user-attachments/assets/5cf6cd54-a2e6-46c3-9244-ca81aa2a41f4)
